@@ -7,6 +7,7 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { IntercepteurService } from './service/intercepteur-service.service';
 import { AddEquipmentComponent } from './add-equipment/add-equipment.component';
 import { ListEquipmentComponent } from './list-equipment/list-equipment.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,11 +18,12 @@ import { ListEquipmentComponent } from './list-equipment/list-equipment.componen
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [
     provideClientHydration(),
-    { provide: HTTP_INTERCEPTORS, useClass: IntercepteurService, multi: true },
+    //{ provide: HTTP_INTERCEPTORS, useClass: IntercepteurService, multi: true },
   ],
   bootstrap: [AppComponent]
 })
