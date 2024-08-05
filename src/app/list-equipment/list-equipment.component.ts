@@ -14,8 +14,12 @@ export class ListEquipmentComponent implements OnInit{
   ngOnInit(): void {
     this.srv.showEquipements().subscribe(value=>{
       this.Listequipment=value
+    }) 
+  }
+  deleteEquipement(id:number){
+    this.srv.deleteEquipement(id).subscribe(()=>{
+      this.ngOnInit()
     })
-    
   }
 
 }

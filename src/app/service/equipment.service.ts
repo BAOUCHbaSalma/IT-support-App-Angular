@@ -19,4 +19,7 @@ export class EquipmentService {
   public showEquipements(){
     return this.http.get(`${this.urlApiAdmin}/equipments`)
   }
+  public deleteEquipement(id:number){
+    return this.http.delete(`${this.urlApiAdmin}/equipment/${id}`)
+  }
 }
