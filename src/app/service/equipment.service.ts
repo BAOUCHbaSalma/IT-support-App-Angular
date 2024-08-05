@@ -22,4 +22,11 @@ export class EquipmentService {
   public deleteEquipement(id:number){
     return this.http.delete(`${this.urlApiAdmin}/equipment/${id}`)
   }
+  public updateEquipement(id:number,equipement:Equipment){
+    return this.http.put(`${this.urlApiAdmin}/equipment/update/${id}`,equipement)
+  }
+  public findById(id:number){
+    return this.http.get(`${this.urlApi}/equipement/${id}`)
+
+  }
 }

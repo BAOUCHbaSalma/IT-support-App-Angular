@@ -8,12 +8,14 @@ import { IntercepteurService } from './service/intercepteur-service.service';
 import { AddEquipmentComponent } from './add-equipment/add-equipment.component';
 import { ListEquipmentComponent } from './list-equipment/list-equipment.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { UpdateEquipmentComponent } from './update-equipment/update-equipment.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddEquipmentComponent,
-    ListEquipmentComponent
+    ListEquipmentComponent,
+    UpdateEquipmentComponent
   ],
   imports: [
     BrowserModule,
