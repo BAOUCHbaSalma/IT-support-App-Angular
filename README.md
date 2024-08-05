@@ -1,27 +1,48 @@
-# ItSupport
+# Système de Gestion des Équipements Informatiques
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.0.
+Ce projet est un système de gestion des équipements informatiques développé en utilisant Java avec Spring Boot pour le backend et Angular 16 pour le frontend. Il est conçu pour permettre une gestion efficace des équipements, la gestion des pannes, des tickets de support, et des rapports statistiques.
 
-## Development server
+## Technologies Utilisées
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- **Backend** : Spring Boot, Spring Data JPA, Spring Security
+- **Frontend** : Angular 17
+- **Base de données** :MySQL
+- **Test unitaire** : JUnit
+- **Conteneurisation** : Docker
 
-## Code scaffolding
+## Fonctionnalités
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Gestion des Équipements Informatiques
+- Ajouter, modifier et supprimer des équipements.
+- Voir une liste de tous les équipements avec leur état actuel.
 
-## Build
+### Suivi des Pannes
+- Signaler une panne sur un équipement.
+- Enregistrer et suivre les pannes détectées.
+- Consulter l'historique des pannes pour identifier les équipements problématiques.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Gestion des Tickets de Support
+- Créer des tickets de support pour signaler des problèmes techniques.
+- Attribuer les tickets de support aux techniciens disponibles.
+- Suivre l'état des tickets de support.
 
-## Running unit tests
+### Bonus
+- Recevoir des notifications pour les tickets en attente.
+- Voir des statistiques sur les pannes.
+- Générer des rapports sur l'état des équipements et les performances du service de support.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Installation
 
-## Running end-to-end tests
+### Prérequis
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- JDK 22
+- Node.js et npm
+- Docker (pour la conteneurisation)
+- MySQL
 
-## Further help
+### Backend
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+1. Clonez le repository :
+   ```bash
+   git clone https://github.com/BAOUCHbaSalma/IT-support-App-Angular.git
+# IT-support-App
