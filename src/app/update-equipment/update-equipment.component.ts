@@ -41,15 +41,15 @@ export class UpdateEquipmentComponent implements OnInit {
       status: this.equipementForm.value.status,
       user: {
         id: this.equipementForm.value.userId,
-        username: '', // Set default or required values
-        password: '', // Set default or required values
-        email: '',    // Set default or required values
-        role: Erole.USER // Assuming default role is USER
+        username: '',
+        password: '', 
+        email: '',    
+        role: Erole.USER 
       }
     };
 
     this.srv.updateEquipement(this.idEquipment, updatedEquipment).subscribe(() => {
-      this.router.navigateByUrl(''); // Redirect or handle post-update actions
+      this.router.navigateByUrl(''); 
     });
   }
 

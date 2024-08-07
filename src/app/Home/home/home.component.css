@@ -1,0 +1,46 @@
+.main{
+    width: 100%;
+    height: 100vh;
+    background-image: url("../../../assets/images/codifyformatter.jpg");
+    background-size: cover;
+}
+.main-warapper{
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+}
+.header{
+    width: 100%;
+    display: flex;
+}
+.logo{
+    width: 200px;
+}
+.hero{
+    width: 100%;
+    height: 82%;
+    display: flex;
+    justify-content: space-between;
+    background: #293e5367;
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+}
+.hero-left{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero-left-img{
+    width: 80%;
+    height: 80%;
+    border-radius: 15px;
+    background: var(--color-primary);
+    box-shadow: 8px 12px 25px rgba(0, 0, 0, 0.498);
+    padding: 0 10px;
+}
+.hero-left-img > img{
+    width: 100%;
+    height: 100%;
+}

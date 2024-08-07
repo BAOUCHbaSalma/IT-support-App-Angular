@@ -9,13 +9,17 @@ import { AddEquipmentComponent } from './add-equipment/add-equipment.component';
 import { ListEquipmentComponent } from './list-equipment/list-equipment.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { UpdateEquipmentComponent } from './update-equipment/update-equipment.component';
+import { LoginComponent } from './Home/login/login.component';
+import { HomeComponent } from './Home/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddEquipmentComponent,
     ListEquipmentComponent,
-    UpdateEquipmentComponent
+    UpdateEquipmentComponent,
+    LoginComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +29,7 @@ import { UpdateEquipmentComponent } from './update-equipment/update-equipment.co
   ],
   providers: [
     provideClientHydration(),
-    //{ provide: HTTP_INTERCEPTORS, useClass: IntercepteurService, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: IntercepteurService, multi: true },
   ],
   bootstrap: [AppComponent]
 })

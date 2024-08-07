@@ -39,6 +39,10 @@ export interface Equipment{
     user:User
 
 }
+export interface LoginRequest{
+    username:string
+    password:string
+}
 export enum Erole {
     ADMIN = 'ADMIN',
     USER = 'USER',
