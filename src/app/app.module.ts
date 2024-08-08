@@ -13,6 +13,7 @@ import { LoginComponent } from './Home/login/login.component';
 import { HomeComponent } from './Home/home/home.component';
 import { AddFailureComponent } from './add-failure/add-failure.component';
 import { FailureComponent } from './failure/failure.component';
+import { UpdateFailureComponent } from './update-failure/update-failure.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { FailureComponent } from './failure/failure.component';
     LoginComponent,
     HomeComponent,
     AddFailureComponent,
-    FailureComponent
+    FailureComponent,
+    UpdateFailureComponent
   ],
   imports: [
     BrowserModule,

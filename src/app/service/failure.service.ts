@@ -27,4 +27,7 @@ export class FailureService {
   public showFailures():Observable<Failure[]>{
     return this.http.get<Failure[]>(`${this.urlApi}/failure`)
   }
+  public findById(idFailure:number){
+    return this.http.get(`${this.urlApiAdmin}/findF/${idFailure}`)
+  }
 }
