@@ -23,4 +23,7 @@ export class FailureService {
   public updateFailure(idFailure:number,failure:Failure){
     return this.http.put(`${this.urlApiAdmin}/failure/${idFailure}`,failure)
   }
+  public showFailures(){
+    return this.http.get(`${this.urlApiUser}/failure`)
+  }
 }
