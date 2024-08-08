@@ -15,5 +15,10 @@ export class FailureComponent implements OnInit{
       this.failureList=res;
     })
   }
+  deleteFailure(id:number){
+    this.srv.deleteFailure(id).subscribe(()=>{
+      this.ngOnInit()
+    })
+  }
 
 }

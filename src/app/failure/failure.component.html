@@ -9,6 +9,10 @@
     <tr *ngFor="let failure of failureList">
         <td>{{failure.name}}</td>
         <td>{{failure.description}}</td>
+        <td>
+        <button id="delete" (click)="deleteFailure(failure.id)">Delete</button>
+        <button><a routerLink="/failure/{{failure.id}}">update</a></button> 
+        </td>
     </tr>
 </tbody>
 </table>
