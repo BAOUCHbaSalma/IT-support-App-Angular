@@ -12,6 +12,7 @@ import { UpdateEquipmentComponent } from './update-equipment/update-equipment.co
 import { LoginComponent } from './Home/login/login.component';
 import { HomeComponent } from './Home/home/home.component';
 import { AddFailureComponent } from './add-failure/add-failure.component';
+import { FailureComponent } from './failure/failure.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { AddFailureComponent } from './add-failure/add-failure.component';
     UpdateEquipmentComponent,
     LoginComponent,
     HomeComponent,
-    AddFailureComponent
+    AddFailureComponent,
+    FailureComponent
   ],
   imports: [
     BrowserModule,

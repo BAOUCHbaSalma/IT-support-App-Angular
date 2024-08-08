@@ -5,13 +5,15 @@ import { ListEquipmentComponent } from './list-equipment/list-equipment.componen
 import { UpdateEquipmentComponent } from './update-equipment/update-equipment.component';
 import { LoginComponent } from './Home/login/login.component';
 import { AddFailureComponent } from './add-failure/add-failure.component';
+import { FailureComponent } from './failure/failure.component';
 
 const routes: Routes = [
   {path:"",component:LoginComponent},
   {path:"equipements",component:ListEquipmentComponent},
   {path:"equipement",component:AddEquipmentComponent},
   {path:"equipment/:id",component:UpdateEquipmentComponent},
-  {path:"failure",component:AddFailureComponent}
+  {path:"failure",component:AddFailureComponent},
+  {path:"failures",component:FailureComponent}
 ];
 
 @NgModule({

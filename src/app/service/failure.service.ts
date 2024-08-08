@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Failure } from '../model/it-support';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -23,7 +24,7 @@ export class FailureService {
   public updateFailure(idFailure:number,failure:Failure){
     return this.http.put(`${this.urlApiAdmin}/failure/${idFailure}`,failure)
   }
-  public showFailures(){
-    return this.http.get(`${this.urlApiUser}/failure`)
+  public showFailures():Observable<Failure[]>{
+    return this.http.get<Failure[]>(`${this.urlApi}/failure`)
   }
 }
