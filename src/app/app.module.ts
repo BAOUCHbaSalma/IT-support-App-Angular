@@ -11,6 +11,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { UpdateEquipmentComponent } from './update-equipment/update-equipment.component';
 import { LoginComponent } from './Home/login/login.component';
 import { HomeComponent } from './Home/home/home.component';
+import { AddFailureComponent } from './add-failure/add-failure.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { HomeComponent } from './Home/home/home.component';
     ListEquipmentComponent,
     UpdateEquipmentComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    AddFailureComponent
   ],
   imports: [
     BrowserModule,

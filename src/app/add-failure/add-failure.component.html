@@ -1,0 +1,13 @@
+<form [formGroup]="failureForm" (ngSubmit)="saveFailure()">
+
+
+
+    <label for="name">Name:</label><br>
+    <input id="name" formControlName="name" type="text" placeholder="Name Failure "><br>
+
+    <label for="description">Insertion Date:</label><br>
+    <input id="description" formControlName="description" type="text" placeholder="Description Failure"><br>
+
+    <button  type="submit">Submit</button>
+
+</form>
