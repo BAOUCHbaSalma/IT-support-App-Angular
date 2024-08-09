@@ -2,8 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { LoginService } from '../../service/login.service';
 import { FormBuilder, FormGroup } from '@angular/forms';
 
-import { LoginRequest, Person } from '../../model/it-support';
+import { Erole, LoginRequest, Person } from '../../model/it-support';
 import { Router } from '@angular/router';
+import { DecodejwtService } from '../../service/decode-jwt.service';
+import { PersonService } from '../../service/person.service';
 
 @Component({
   selector: 'app-login',
@@ -12,8 +14,9 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit{
   loginForm!:FormGroup
+  username!:string
   
-  constructor(private srv:LoginService,private fb:FormBuilder,private route:Router){}
+  constructor(private srv:LoginService,private fb:FormBuilder,private route:Router,private srvd:DecodejwtService,private srvp:PersonService){}
   ngOnInit(): void {
 
     this.loginForm=this.fb.group({
@@ -32,8 +35,22 @@ export class LoginComponent implements OnInit{
       if (res && res.token) {
         console.log("login successs")
         localStorage.setItem("jwt", res.token)
+       this.username= this.srvd.getUsernameFromToken(res.token)
+       this.srvp.findByUsername(this.username).subscribe((re:any)=>{
+        if(re.role==Erole.ADMIN){
+
+        }else if(re.role==Erole.TECHNICIAN){
+
+        }else{
+
+        }
+       })
+
+        
+
+
       }
-      this.route.navigateByUrl('equipements')
+      
 
 })
 }
