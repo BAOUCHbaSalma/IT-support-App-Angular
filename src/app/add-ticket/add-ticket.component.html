@@ -1,0 +1,18 @@
+<form [formGroup]="ticketForm" (ngSubmit)="saveTicket()">
+
+
+    <label for="description">description:</label><br>
+    <input id="description" formControlName="description" type="text" placeholder="description de Failure "><br>
+
+    <label for="userId">userId:</label><br>
+    <input id="userId" formControlName="userId" type="text" placeholder="userId"><br>
+
+    <label for="equipementId">equipementId:</label><br>
+    <input id="equipementId" formControlName="equipementId" type="text" placeholder="equipementId"><br>
+
+    <label for="failureId">failureId:</label><br>
+    <input id="failureId" formControlName="failureId" type="text" placeholder="failureId"><br>
+
+    <button  type="submit">Submit</button>
+
+</form>

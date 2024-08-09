@@ -43,6 +43,12 @@ export interface LoginRequest{
     username:string
     password:string
 }
+export interface SupportTicketDTO{
+    description:string
+    failureId:number
+    equipmentId:number
+    userId:number
+}
 export enum Erole {
     ADMIN = 'ADMIN',
     USER = 'USER',

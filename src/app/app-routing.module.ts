@@ -7,6 +7,7 @@ import { LoginComponent } from './Home/login/login.component';
 import { AddFailureComponent } from './add-failure/add-failure.component';
 import { FailureComponent } from './failure/failure.component';
 import { UpdateFailureComponent } from './update-failure/update-failure.component';
+import { AddTicketComponent } from './add-ticket/add-ticket.component';
 
 const routes: Routes = [
   {path:"",component:LoginComponent},
@@ -15,7 +16,9 @@ const routes: Routes = [
   {path:"equipment/:id",component:UpdateEquipmentComponent},
   {path:"failure",component:AddFailureComponent},
   {path:"failures",component:FailureComponent},
-  {path:"failure/:id",component:UpdateFailureComponent}
+  {path:"failure/:id",component:UpdateFailureComponent},
+  {path:"ticket",component:AddTicketComponent}
+
 ];
 
 @NgModule({

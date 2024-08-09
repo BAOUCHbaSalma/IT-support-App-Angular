@@ -14,6 +14,7 @@ import { HomeComponent } from './Home/home/home.component';
 import { AddFailureComponent } from './add-failure/add-failure.component';
 import { FailureComponent } from './failure/failure.component';
 import { UpdateFailureComponent } from './update-failure/update-failure.component';
+import { AddTicketComponent } from './add-ticket/add-ticket.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { UpdateFailureComponent } from './update-failure/update-failure.componen
     HomeComponent,
     AddFailureComponent,
     FailureComponent,
-    UpdateFailureComponent
+    UpdateFailureComponent,
+    AddTicketComponent
   ],
   imports: [
     BrowserModule,
