@@ -8,6 +8,7 @@ import { AddFailureComponent } from './add-failure/add-failure.component';
 import { FailureComponent } from './failure/failure.component';
 import { UpdateFailureComponent } from './update-failure/update-failure.component';
 import { AddTicketComponent } from './add-ticket/add-ticket.component';
+import { ListTicketsUserComponent } from './list-tickets-user/list-tickets-user.component';
 
 const routes: Routes = [
   {path:"",component:LoginComponent},
@@ -17,7 +18,8 @@ const routes: Routes = [
   {path:"failure",component:AddFailureComponent},
   {path:"failures",component:FailureComponent},
   {path:"failure/:id",component:UpdateFailureComponent},
-  {path:"ticket",component:AddTicketComponent}
+  {path:"ticket",component:AddTicketComponent},
+  {path:"tickets/:id",component:ListTicketsUserComponent}
 
 ];
 

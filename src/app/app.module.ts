@@ -15,6 +15,7 @@ import { AddFailureComponent } from './add-failure/add-failure.component';
 import { FailureComponent } from './failure/failure.component';
 import { UpdateFailureComponent } from './update-failure/update-failure.component';
 import { AddTicketComponent } from './add-ticket/add-ticket.component';
+import { ListTicketsUserComponent } from './list-tickets-user/list-tickets-user.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { AddTicketComponent } from './add-ticket/add-ticket.component';
     AddFailureComponent,
     FailureComponent,
     UpdateFailureComponent,
-    AddTicketComponent
+    AddTicketComponent,
+    ListTicketsUserComponent
   ],
   imports: [
     BrowserModule,

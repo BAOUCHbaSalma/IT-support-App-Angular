@@ -1,0 +1,26 @@
+<table>
+    <thead>
+    <tr>
+      <th>Description</th>
+      <th>Creation date</th>
+      <th>Reparation effectue</th>
+      <th>status</th>
+      <th>Name equipment</th>
+      <th>Name failure</th>
+      
+  
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let ticket of listTicket">
+      <td>{{ ticket.description }}</td>
+      <td>{{ ticket.creationDate}}</td>
+      <td>{{ ticket.reparationEffectue}}</td>
+      <td>{{ ticket.status}}</td>
+      <td>{{ ticket.nameEquipment}}</td>
+      <td>{{ ticket.nameFailure}}</td>
+     
+    </tr>
+    </tbody>
+  </table>
+ 

@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { SupportTicket, SupportTicketDTO } from '../model/it-support';
+import { SupportTicket, SupportTicketDTO, SupportTicketDTOUser } from '../model/it-support';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -17,5 +18,9 @@ export class SupportTicketService {
 
   public addTicket(ticket :SupportTicketDTO){
     return this.http.post(`${this.urlApiUser}/ticket`,ticket)
+  }
+  public findTicketsById(id:number):Observable<SupportTicketDTOUser[]>{
+    return this.http.get<SupportTicketDTOUser[]>(`${this.urlApiUser}/findtickets/${id}`)
+
   }
 }

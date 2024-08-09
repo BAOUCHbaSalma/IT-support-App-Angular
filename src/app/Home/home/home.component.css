@@ -8,17 +8,12 @@
     width: 80%;
     height: 100%;
     margin: 0 auto;
-}
-.header{
-    width: 100%;
     display: flex;
-}
-.logo{
-    width: 200px;
+    align-items: center;
 }
 .hero{
     width: 100%;
-    height: 82%;
+    height: 90%;
     display: flex;
     justify-content: space-between;
     background: #293e5367;
@@ -34,7 +29,7 @@
 }
 .hero-left-img{
     width: 80%;
-    height: 80%;
+    height: 90%;
     border-radius: 15px;
     background: var(--color-primary);
     box-shadow: 8px 12px 25px rgba(0, 0, 0, 0.498);
@@ -43,4 +38,7 @@
 .hero-left-img > img{
     width: 100%;
     height: 100%;
+}
+.logo{
+    width: 200px;
 }

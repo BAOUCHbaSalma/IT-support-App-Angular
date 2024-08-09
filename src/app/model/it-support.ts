@@ -49,6 +49,16 @@ export interface SupportTicketDTO{
     equipmentId:number
     userId:number
 }
+export interface SupportTicketDTOUser{
+    description:string
+    creationDate:string
+    reparationEffectue:string
+    status:Erole
+    nameEquipment:string
+    nameFailure:string
+
+}
+
 export enum Erole {
     ADMIN = 'ADMIN',
     USER = 'USER',
