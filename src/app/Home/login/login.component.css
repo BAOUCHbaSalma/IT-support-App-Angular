@@ -1,0 +1,44 @@
+form{
+    width: 100%;
+    padding: 20px 0;
+}
+.group{
+    width: 100%;
+    padding: 6px 0;
+}
+.group > label{
+    font-size: 15px;
+    font-weight: 800;
+    color: white;
+    padding: 10px 0;
+}
+.group > input{
+    padding: 10px 12px;
+    border: 2px solid grey;
+    border-radius: 8px;
+    width: 80%;
+    background: transparent;
+    margin: 5px 0;
+    color: white;
+}
+::placeholder{
+    color: white;
+}
+form > button{
+    padding: 10px 15px;
+    background: white;
+    color: black;
+    font-size: 17px;
+    font-weight: 600;
+    border: none;
+    transition: .4s;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-top: 10px;
+    border: 2px solid transparent;
+}
+form > button:hover{
+    border: 2px solid grey;
+    color: white;
+    background: transparent;
+}

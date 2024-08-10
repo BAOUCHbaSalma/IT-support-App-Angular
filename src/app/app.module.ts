@@ -16,6 +16,10 @@ import { FailureComponent } from './failure/failure.component';
 import { UpdateFailureComponent } from './update-failure/update-failure.component';
 import { AddTicketComponent } from './add-ticket/add-ticket.component';
 import { ListTicketsUserComponent } from './list-tickets-user/list-tickets-user.component';
+import { DashboardComponent } from './Dash/dashboard/dashboard.component';
+import { MenuComponent } from './menu/menu.component';
+import { LogoutComponent } from './logout/logout.component';
+import { DashboardHomeComponent } from './Dash/dashboard-home/dashboard-home.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +33,11 @@ import { ListTicketsUserComponent } from './list-tickets-user/list-tickets-user.
     FailureComponent,
     UpdateFailureComponent,
     AddTicketComponent,
-    ListTicketsUserComponent
+    ListTicketsUserComponent,
+    DashboardComponent,
+    MenuComponent,
+    LogoutComponent,
+    DashboardHomeComponent
   ],
   imports: [
     BrowserModule,

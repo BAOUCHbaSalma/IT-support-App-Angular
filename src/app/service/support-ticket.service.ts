@@ -23,4 +23,10 @@ export class SupportTicketService {
     return this.http.get<SupportTicketDTOUser[]>(`${this.urlApiUser}/findtickets/${id}`)
 
   }
+  public associateTicket(id:number,Ticket:SupportTicket){
+   return this.http.put(`${this.urlApiAdmin}/ticket/update/${id}`,Ticket)
+  }
+  public updateTicketTechnician(id:number,Ticket:SupportTicket){
+    return this.http.put(`${this.urlApiTechnician}/ticket/update/${id}`,Ticket)
+  }
 }

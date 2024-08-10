@@ -1,0 +1,21 @@
+.main{
+    width: 100%;
+    height: 1000px;
+    padding: 20px;
+}
+.add-update-material{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.add-materials{
+    width: 100%;
+    padding: 20px;
+    background: var(--bg-primary);
+    border-radius: 12px;
+}
+.add-materials > h4{
+    font-size: 20px;
+    color: white;
+    text-transform: uppercase;
+}
