@@ -11,13 +11,16 @@ import { AddTicketComponent } from './add-ticket/add-ticket.component';
 import { ListTicketsUserComponent } from './list-tickets-user/list-tickets-user.component';
 import { HomeComponent } from './Home/home/home.component';
 import { DashboardComponent } from './Dash/dashboard/dashboard.component';
-import { DashboardHomeComponent } from './Dash/dashboard-home/dashboard-home.component';
+
+import { DashboardSupportTicketComponent } from './Dash/dashboard-support-ticket/dashboard-support-ticket.component';
+import { DashboardHomeComponent } from './dashboard-home/dashboard-home.component';
 
 const routes: Routes = [
   {path:"",component:HomeComponent},
   {
     path: 'dashboard', component: DashboardComponent, children: [
     {path: '', component: DashboardHomeComponent },
+    {path:'tickets',component:DashboardSupportTicketComponent}
     ]
   }
   // {path:"equipements",component:ListEquipmentComponent},

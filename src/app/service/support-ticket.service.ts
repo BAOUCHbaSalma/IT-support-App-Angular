@@ -29,4 +29,8 @@ export class SupportTicketService {
   public updateTicketTechnician(id:number,Ticket:SupportTicket){
     return this.http.put(`${this.urlApiTechnician}/ticket/update/${id}`,Ticket)
   }
+
+  public showAllTickets():Observable<SupportTicket[]>{
+    return this.http.get<SupportTicket[]>(`${this.urlApiAdmin}/showAll`)
+  }
 }

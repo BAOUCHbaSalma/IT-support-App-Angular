@@ -1,0 +1,20 @@
+.main{
+    width: 100%;
+    padding: 20px;
+}
+.add-update-material{
+    width: 100%;
+    justify-content: space-between;
+}
+.add-materials,.materials{
+    width: 100%;
+    padding: 20px;
+    background: var(--bg-primary);
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+.add-materials > h4 , .materials > h4{
+    font-size: 20px;
+    color: white;
+    text-transform: uppercase;
+}

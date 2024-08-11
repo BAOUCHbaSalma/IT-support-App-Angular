@@ -19,11 +19,14 @@ import { ListTicketsUserComponent } from './list-tickets-user/list-tickets-user.
 import { DashboardComponent } from './Dash/dashboard/dashboard.component';
 import { MenuComponent } from './menu/menu.component';
 import { LogoutComponent } from './logout/logout.component';
-import { DashboardHomeComponent } from './Dash/dashboard-home/dashboard-home.component';
+
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import { DashboardSupportTicketComponent } from './Dash/dashboard-support-ticket/dashboard-support-ticket.component';
+import { ListAllTicketsComponent } from './list-all-tickets/list-all-tickets.component';
+import { DashboardHomeComponent } from './dashboard-home/dashboard-home.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +44,9 @@ import { MatSortModule } from '@angular/material/sort';
     DashboardComponent,
     MenuComponent,
     LogoutComponent,
-    DashboardHomeComponent
+    DashboardHomeComponent,
+    DashboardSupportTicketComponent,
+    ListAllTicketsComponent
   ],
   imports: [
     BrowserModule,

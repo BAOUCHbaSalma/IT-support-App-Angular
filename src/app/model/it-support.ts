@@ -19,7 +19,7 @@ export interface SupportTicket{
     description:string
     creationDate:string
     status:EStatus
-    reparationEffectue:string
+    repairDescription:string
     user:User
     technician:Technician
     equipment:Equipment
@@ -52,7 +52,7 @@ export interface SupportTicketDTO{
 export interface SupportTicketDTOUser{
     description:string
     creationDate:string
-    reparationEffectue:string
+    repairDescription:string
     status:Erole
     nameEquipment:string
     nameFailure:string
