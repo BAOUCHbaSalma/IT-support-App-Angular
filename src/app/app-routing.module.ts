@@ -14,13 +14,15 @@ import { DashboardComponent } from './Dash/dashboard/dashboard.component';
 
 import { DashboardSupportTicketComponent } from './dashboard-support-ticket/dashboard-support-ticket.component';
 import { DashboardHomeComponent } from './dashboard-home/dashboard-home.component';
+import { DashboardFailureComponent } from './dashboard-failure/dashboard-failure.component';
 
 const routes: Routes = [
   {path:"",component:HomeComponent},
   {
     path: 'dashboard', component: DashboardComponent, children: [
     {path: '', component: DashboardHomeComponent },
-    {path:'tickets',component:DashboardSupportTicketComponent}
+    {path:'tickets',component:DashboardSupportTicketComponent},
+    {path:'failures',component:DashboardFailureComponent}
     ]
   }
   // {path:"equipements",component:ListEquipmentComponent},

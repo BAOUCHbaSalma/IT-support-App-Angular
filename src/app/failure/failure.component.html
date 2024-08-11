@@ -1,4 +1,4 @@
-<table>
+<!-- <table>
     <thead>
     <tr>
         <th>Nam</th>
@@ -16,7 +16,49 @@
     </tr>
 </tbody>
 </table>
-<table>
+<table> -->
+
+    <div class="hero">
+        <div class="hero-warpper">
+          <table id="mat-table" mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    
+            <ng-container matColumnDef="Name">
+              <th mat-header-cell *matHeaderCellDef> Name </th>
+              <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+            </ng-container>
+          
+           
+            <ng-container matColumnDef="Description">
+              <th mat-header-cell *matHeaderCellDef> Description </th>
+              <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="delete">
+                <th mat-header-cell *matHeaderCellDef>Remove</th>
+                <td mat-cell *matCellDef="let element">
+                  <button mat-button  color="warn"  id="remove" (click)="deleteFailure(element.id)">
+                    Delete
+                  </button>
+                </td>
+              </ng-container>
+      
+              <ng-container matColumnDef="update">
+                <th mat-header-cell *matHeaderCellDef>Update</th>
+                <td mat-cell *matCellDef="let element">
+                  <button  mat-button color="primary" id="update" >
+                    Update
+                  </button>
+                </td>
+              </ng-container>
+          
+    
+          
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+        </div>
+      </div>
+      
 
 
   

@@ -22,5 +22,5 @@ export class ListTicketsProgressComponent implements OnInit{
     })
     
   }
-  displayedColumns: string[] = ['Description', 'Creation Date', 'Repair Description', 'Status','Name Equipment','Name Failure' ];
+  displayedColumns: string[] = ['Description', 'Creation Date', 'Repair Description', 'Status','Name Equipment','Name Failure','Name Technician'];
 }

@@ -27,6 +27,11 @@
            [ngClass]="{'active': activeLink === '/dashboard/employees'}">
           <img src="../../../assets/icons/accountant.png" alt="">Employees
         </a>
+        <a routerLink="/dashboard/failures" 
+        (click)="setActive('/dashboard/failures')" 
+        [ngClass]="{'active': activeLink === '/dashboard/failures'}">
+       <img src="../../../assets/icons/technique.png" alt="">Failure
+     </a>
         <a routerLink="/settings" 
            (click)="setActive('/settings')" 
            [ngClass]="{'active': activeLink === '/settings'}">
