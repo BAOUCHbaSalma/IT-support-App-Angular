@@ -15,6 +15,7 @@ import { DashboardComponent } from './Dash/dashboard/dashboard.component';
 import { DashboardSupportTicketComponent } from './dashboard-support-ticket/dashboard-support-ticket.component';
 import { DashboardHomeComponent } from './dashboard-home/dashboard-home.component';
 import { DashboardFailureComponent } from './dashboard-failure/dashboard-failure.component';
+import { DashboardEmployeesComponent } from './dashboard-employees/dashboard-employees.component';
 
 const routes: Routes = [
   {path:"",component:HomeComponent},
@@ -22,7 +23,8 @@ const routes: Routes = [
     path: 'dashboard', component: DashboardComponent, children: [
     {path: '', component: DashboardHomeComponent },
     {path:'tickets',component:DashboardSupportTicketComponent},
-    {path:'failures',component:DashboardFailureComponent}
+    {path:'failures',component:DashboardFailureComponent},
+    {path:'employees',component:DashboardEmployeesComponent}
     ]
   }
   // {path:"equipements",component:ListEquipmentComponent},

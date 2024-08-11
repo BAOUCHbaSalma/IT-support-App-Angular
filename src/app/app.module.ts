@@ -31,6 +31,8 @@ import { ListTicketsResolvedComponent } from './list-tickets-resolved/list-ticke
 import { ListTicketsProgressComponent } from './list-tickets-progress/list-tickets-progress.component';
 import { ListTicketsPendingComponent } from './list-tickets-pending/list-tickets-pending.component';
 import { DashboardFailureComponent } from './dashboard-failure/dashboard-failure.component';
+import { DashboardEmployeesComponent } from './dashboard-employees/dashboard-employees.component';
+import { ListEmployeesComponent } from './list-employees/list-employees.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +56,9 @@ import { DashboardFailureComponent } from './dashboard-failure/dashboard-failure
     ListTicketsResolvedComponent,
     ListTicketsProgressComponent,
     ListTicketsPendingComponent,
-    DashboardFailureComponent
+    DashboardFailureComponent,
+    DashboardEmployeesComponent,
+    ListEmployeesComponent
   ],
   imports: [
     BrowserModule,

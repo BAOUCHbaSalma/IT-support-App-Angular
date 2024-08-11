@@ -1,5 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Person } from '../model/it-support';
 
 @Injectable({
   providedIn: 'root'
@@ -15,5 +17,10 @@ export class PersonService {
 
   public findByUsername(username:string){
     return this.http.get(`${this.urlApi}/find/${username}`)
+  }
+
+  public findPersonByRole():Observable<Person[]>{
+    return this.http.get<Person[]>(`${this.urlApiAdmin}/employees`)
+
   }
 }
