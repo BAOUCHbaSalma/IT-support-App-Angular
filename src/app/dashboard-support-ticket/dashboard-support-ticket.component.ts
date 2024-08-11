@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { SupportTicketService } from '../../service/support-ticket.service';
-import { SupportTicket } from '../../model/it-support';
+import { SupportTicketService } from '../service/support-ticket.service';
+import { SupportTicket } from '../model/it-support';
 import { MatTableDataSource } from '@angular/material/table';
 
 @Component({

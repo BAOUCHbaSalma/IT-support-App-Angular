@@ -12,7 +12,7 @@ import { ListTicketsUserComponent } from './list-tickets-user/list-tickets-user.
 import { HomeComponent } from './Home/home/home.component';
 import { DashboardComponent } from './Dash/dashboard/dashboard.component';
 
-import { DashboardSupportTicketComponent } from './Dash/dashboard-support-ticket/dashboard-support-ticket.component';
+import { DashboardSupportTicketComponent } from './dashboard-support-ticket/dashboard-support-ticket.component';
 import { DashboardHomeComponent } from './dashboard-home/dashboard-home.component';
 
 const routes: Routes = [

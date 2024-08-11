@@ -24,9 +24,12 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
-import { DashboardSupportTicketComponent } from './Dash/dashboard-support-ticket/dashboard-support-ticket.component';
+import { DashboardSupportTicketComponent } from './dashboard-support-ticket/dashboard-support-ticket.component';
 import { ListAllTicketsComponent } from './list-all-tickets/list-all-tickets.component';
 import { DashboardHomeComponent } from './dashboard-home/dashboard-home.component';
+import { ListTicketsResolvedComponent } from './list-tickets-resolved/list-tickets-resolved.component';
+import { ListTicketsProgressComponent } from './list-tickets-progress/list-tickets-progress.component';
+import { ListTicketsPendingComponent } from './list-tickets-pending/list-tickets-pending.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +49,10 @@ import { DashboardHomeComponent } from './dashboard-home/dashboard-home.componen
     LogoutComponent,
     DashboardHomeComponent,
     DashboardSupportTicketComponent,
-    ListAllTicketsComponent
+    ListAllTicketsComponent,
+    ListTicketsResolvedComponent,
+    ListTicketsProgressComponent,
+    ListTicketsPendingComponent
   ],
   imports: [
     BrowserModule,

@@ -33,4 +33,17 @@ export class SupportTicketService {
   public showAllTickets():Observable<SupportTicket[]>{
     return this.http.get<SupportTicket[]>(`${this.urlApiAdmin}/showAll`)
   }
+
+  public showTicketsInProgress():Observable<SupportTicket[]>{
+    return this.http.get<SupportTicket[]>(`${this.urlApiAdmin}/tickets/progress`)
+  }
+
+  public showTicketsResolved():Observable<SupportTicket[]>{
+    return this.http.get<SupportTicket[]>(`${this.urlApiAdmin}/tickets/resolved`)
+  }
+
+  public showTicketsPending():Observable<SupportTicket[]>{
+    return this.http.get<SupportTicket[]>(`${this.urlApiAdmin}/tickets/pending`)
+  }
+
 }
