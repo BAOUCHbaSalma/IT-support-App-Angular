@@ -24,7 +24,8 @@ const routes: Routes = [
     {path: '', component: DashboardHomeComponent },
     {path:'tickets',component:DashboardSupportTicketComponent},
     {path:'failures',component:DashboardFailureComponent},
-    {path:'employees',component:DashboardEmployeesComponent}
+    {path:'employees',component:DashboardEmployeesComponent},
+    {path:'update/:id',component:UpdateEquipmentComponent}
     ]
   }
   // {path:"equipements",component:ListEquipmentComponent},
