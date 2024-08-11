@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { EquipmentService } from '../service/equipment.service';
+import { Equipment } from '../model/it-support';
+import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
   selector: 'app-list-equipment',
@@ -8,12 +10,14 @@ import { EquipmentService } from '../service/equipment.service';
 })
 export class ListEquipmentComponent implements OnInit{
   Listequipment:any
+  dataSource = new MatTableDataSource<Equipment>();
 
   constructor(private srv:EquipmentService){}
 
   ngOnInit(): void {
     this.srv.showEquipements().subscribe(value=>{
       this.Listequipment=value
+      this.dataSource.data = this.Listequipment;
     }) 
   }
   deleteEquipement(id:number){
@@ -21,5 +25,6 @@ export class ListEquipmentComponent implements OnInit{
       this.ngOnInit()
     })
   }
+  displayedColumns: string[] = ['Name', 'Insertion Date', 'User', 'delete', 'update'];
 
 }

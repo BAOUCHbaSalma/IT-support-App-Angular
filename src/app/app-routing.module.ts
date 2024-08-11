@@ -9,17 +9,25 @@ import { FailureComponent } from './failure/failure.component';
 import { UpdateFailureComponent } from './update-failure/update-failure.component';
 import { AddTicketComponent } from './add-ticket/add-ticket.component';
 import { ListTicketsUserComponent } from './list-tickets-user/list-tickets-user.component';
+import { HomeComponent } from './Home/home/home.component';
+import { DashboardComponent } from './Dash/dashboard/dashboard.component';
+import { DashboardHomeComponent } from './Dash/dashboard-home/dashboard-home.component';
 
 const routes: Routes = [
-  {path:"",component:LoginComponent},
-  {path:"equipements",component:ListEquipmentComponent},
-  {path:"equipement",component:AddEquipmentComponent},
-  {path:"equipment/:id",component:UpdateEquipmentComponent},
-  {path:"failure",component:AddFailureComponent},
-  {path:"failures",component:FailureComponent},
-  {path:"failure/:id",component:UpdateFailureComponent},
-  {path:"ticket",component:AddTicketComponent},
-  {path:"tickets/:id",component:ListTicketsUserComponent}
+  {path:"",component:HomeComponent},
+  {
+    path: 'dashboard', component: DashboardComponent, children: [
+    {path: '', component: DashboardHomeComponent },
+    ]
+  }
+  // {path:"equipements",component:ListEquipmentComponent},
+  // {path:"equipement",component:AddEquipmentComponent},
+  // {path:"equipment/:id",component:UpdateEquipmentComponent},
+  // {path:"failure",component:AddFailureComponent},
+  // {path:"failures",component:FailureComponent},
+  // {path:"failure/:id",component:UpdateFailureComponent},
+  // {path:"ticket",component:AddTicketComponent},
+  // {path:"tickets/:id",component:ListTicketsUserComponent}
 
 ];
 

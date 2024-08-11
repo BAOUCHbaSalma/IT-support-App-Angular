@@ -39,7 +39,7 @@ export class LoginComponent implements OnInit{
        this.username= this.srvd.getUsernameFromToken(res.token)
        this.srvp.findByUsername(this.username).subscribe((re:any)=>{
         if(re.role==Erole.ADMIN){
-          this.route.navigateByUrl("equipements")
+          this.route.navigateByUrl("dashboard")
         }else if(re.role==Erole.TECHNICIAN){
           this.route.navigateByUrl("")
 

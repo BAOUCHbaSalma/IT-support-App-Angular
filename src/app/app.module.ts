@@ -20,6 +20,10 @@ import { DashboardComponent } from './Dash/dashboard/dashboard.component';
 import { MenuComponent } from './menu/menu.component';
 import { LogoutComponent } from './logout/logout.component';
 import { DashboardHomeComponent } from './Dash/dashboard-home/dashboard-home.component';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 
 @NgModule({
   declarations: [
@@ -43,11 +47,15 @@ import { DashboardHomeComponent } from './Dash/dashboard-home/dashboard-home.com
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
   providers: [
     provideClientHydration(),
     { provide: HTTP_INTERCEPTORS, useClass: IntercepteurService, multi: true },
+    provideAnimationsAsync(),
   ],
   bootstrap: [AppComponent]
 })

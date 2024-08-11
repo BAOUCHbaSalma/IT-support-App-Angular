@@ -54,13 +54,14 @@
     border: 2px solid grey;
     box-shadow: 4px 4px 15px #00000041;
 }
-.menu-link > a:hover , #a1{
+.menu-link > a > img {
+    width: 20px;
+    margin-right: 20px;
+}
+
+.menu-link > a.active, .menu-link > a:hover {
     background:rgba(17, 17, 17, 0.616) ;
     backdrop-filter: blur(10px);
     border: 2px solid var(--color-primary);
     color: var(--color-primary);
-}
-.menu-link > a > img {
-    width: 20px;
-    margin-right: 20px;
 }
