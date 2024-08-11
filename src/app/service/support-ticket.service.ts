@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { SupportTicket, SupportTicketDTO, SupportTicketDTOUser } from '../model/it-support';
+import { SupportTicket, SupportTicketDTO, SupportTicketDTOUser, SupportTicketsDTOAdmin } from '../model/it-support';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -23,7 +23,7 @@ export class SupportTicketService {
     return this.http.get<SupportTicketDTOUser[]>(`${this.urlApiUser}/findtickets/${id}`)
 
   }
-  public associateTicket(id:number,Ticket:SupportTicket){
+  public associateTicket(id:number,Ticket:SupportTicketsDTOAdmin){
    return this.http.put(`${this.urlApiAdmin}/ticket/update/${id}`,Ticket)
   }
   public updateTicketTechnician(id:number,Ticket:SupportTicket){

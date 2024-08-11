@@ -16,13 +16,18 @@ import { DashboardSupportTicketComponent } from './dashboard-support-ticket/dash
 import { DashboardHomeComponent } from './dashboard-home/dashboard-home.component';
 import { DashboardFailureComponent } from './dashboard-failure/dashboard-failure.component';
 import { DashboardEmployeesComponent } from './dashboard-employees/dashboard-employees.component';
+import { ListTicketsPendingComponent } from './list-tickets-pending/list-tickets-pending.component';
+import { AssociateTicketComponent } from './associate-ticket/associate-ticket.component';
 
 const routes: Routes = [
   {path:"",component:HomeComponent},
   {
     path: 'dashboard', component: DashboardComponent, children: [
     {path: '', component: DashboardHomeComponent },
-    {path:'tickets',component:DashboardSupportTicketComponent},
+    {path:'tickets',component:DashboardSupportTicketComponent, children:[
+      {path: '', component: ListTicketsPendingComponent },
+      {path: 'update/:id', component: AssociateTicketComponent },
+    ]},
     {path:'failures',component:DashboardFailureComponent},
     {path:'employees',component:DashboardEmployeesComponent},
     {path:'update/:id',component:UpdateEquipmentComponent}

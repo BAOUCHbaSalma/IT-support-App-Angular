@@ -49,7 +49,7 @@ export class UpdateEquipmentComponent implements OnInit {
     };
 
     this.srv.updateEquipement(this.idEquipment, updatedEquipment).subscribe(() => {
-      this.router.navigateByUrl(''); 
+      this.router.navigateByUrl("dashboard"); 
     });
   }
 

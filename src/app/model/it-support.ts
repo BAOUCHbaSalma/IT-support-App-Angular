@@ -58,6 +58,9 @@ export interface SupportTicketDTOUser{
     nameFailure:string
 
 }
+export interface SupportTicketsDTOAdmin{
+    idTechnicien:number
+}
 
 export enum Erole {
     ADMIN = 'ADMIN',

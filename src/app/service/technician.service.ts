@@ -1,5 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Technician } from '../model/it-support';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +15,7 @@ export class TechnicianService {
 
   constructor(private http:HttpClient) { }
 
-  public showTechnicianAvailable(){
-    return this.http.get(`${this.urlApiAdmin}/technicianAvailable`)
+  public showTechnicianAvailable():Observable<Technician[]>{
+    return this.http.get<Technician[]>(`${this.urlApiAdmin}/technicianAvailable`)
   }
 }

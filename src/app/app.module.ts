@@ -33,6 +33,7 @@ import { ListTicketsPendingComponent } from './list-tickets-pending/list-tickets
 import { DashboardFailureComponent } from './dashboard-failure/dashboard-failure.component';
 import { DashboardEmployeesComponent } from './dashboard-employees/dashboard-employees.component';
 import { ListEmployeesComponent } from './list-employees/list-employees.component';
+import { AssociateTicketComponent } from './associate-ticket/associate-ticket.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +59,8 @@ import { ListEmployeesComponent } from './list-employees/list-employees.componen
     ListTicketsPendingComponent,
     DashboardFailureComponent,
     DashboardEmployeesComponent,
-    ListEmployeesComponent
+    ListEmployeesComponent,
+    AssociateTicketComponent
   ],
   imports: [
     BrowserModule,
