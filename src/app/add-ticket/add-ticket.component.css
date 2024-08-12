@@ -1,0 +1,45 @@
+form{
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    text-align: left;
+   
+}
+.group{
+    width: 100%;
+}
+.group > label{
+    font-size: 15px;
+    color: white;
+    font-weight: 700;
+    padding: 10px 0;
+}
+.group > input {
+    width: 90%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid var(--color-primary);
+    background: transparent;
+    color: white;
+    margin-bottom: 10px;
+    margin-top:6px ;
+}
+::placeholder{
+    color: white;
+}
+button{
+    background: var(--color-primary);
+    border: 1px solid transparent;
+    color: white;
+    font-weight: 700;
+    padding: 10px 12px;
+    border-radius: 8px;
+    margin-top: 10px;
+    transition: .4s;
+    cursor: pointer;
+}
+button:hover{
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+    background: white;
+}

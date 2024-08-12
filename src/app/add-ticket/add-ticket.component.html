@@ -1,6 +1,6 @@
 <form [formGroup]="ticketForm" (ngSubmit)="saveTicket()">
 
-
+    <div class="group">
     <label for="description">description:</label><br>
     <input id="description" formControlName="description" type="text" placeholder="description de Failure "><br>
 
@@ -12,7 +12,10 @@
 
     <label for="failureId">failureId:</label><br>
     <input id="failureId" formControlName="failureId" type="text" placeholder="failureId"><br>
-
     <button  type="submit">Submit</button>
+    </div>
+
+    
+
 
 </form>
