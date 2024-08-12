@@ -20,7 +20,7 @@ export class SupportTicketService {
     return this.http.post(`${this.urlApiUser}/ticket`,ticket)
   }
   public findTicketsById(id:number):Observable<SupportTicketDTOUser[]>{
-    return this.http.get<SupportTicketDTOUser[]>(`${this.urlApiUser}/findtickets/${id}`)
+    return this.http.get<SupportTicketDTOUser[]>(`${this.urlApi}/findtickets/${id}`)
 
   }
   public associateTicket(id:number,Ticket:SupportTicketsDTOAdmin){

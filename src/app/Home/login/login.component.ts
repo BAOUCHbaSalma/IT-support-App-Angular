@@ -44,8 +44,7 @@ export class LoginComponent implements OnInit{
           this.route.navigateByUrl("")
 
         }else{
-          this.route.navigateByUrl(`tickets/${re.id}`)
-
+          this.route.navigateByUrl(`dashuser/${re.id}`)
         }
        })
 

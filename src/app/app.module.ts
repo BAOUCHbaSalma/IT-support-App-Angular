@@ -34,6 +34,7 @@ import { DashboardFailureComponent } from './dashboard-failure/dashboard-failure
 import { DashboardEmployeesComponent } from './dashboard-employees/dashboard-employees.component';
 import { ListEmployeesComponent } from './list-employees/list-employees.component';
 import { AssociateTicketComponent } from './associate-ticket/associate-ticket.component';
+import { DashUserComponent } from './dash-user/dash-user.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +61,8 @@ import { AssociateTicketComponent } from './associate-ticket/associate-ticket.co
     DashboardFailureComponent,
     DashboardEmployeesComponent,
     ListEmployeesComponent,
-    AssociateTicketComponent
+    AssociateTicketComponent,
+    DashUserComponent
   ],
   imports: [
     BrowserModule,

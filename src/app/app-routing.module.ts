@@ -18,6 +18,7 @@ import { DashboardFailureComponent } from './dashboard-failure/dashboard-failure
 import { DashboardEmployeesComponent } from './dashboard-employees/dashboard-employees.component';
 import { ListTicketsPendingComponent } from './list-tickets-pending/list-tickets-pending.component';
 import { AssociateTicketComponent } from './associate-ticket/associate-ticket.component';
+import { DashUserComponent } from './dash-user/dash-user.component';
 
 const routes: Routes = [
   {path:"",component:HomeComponent},
@@ -32,7 +33,12 @@ const routes: Routes = [
     {path:'employees',component:DashboardEmployeesComponent},
     {path:'update/:id',component:UpdateEquipmentComponent}
     ]
-  }
+  },
+  {path: 'dashuser', component: DashUserComponent, children:[
+    {path: 'add', component:AddTicketComponent },
+    {path: ':id', component: ListTicketsUserComponent },
+  ] 
+},
   // {path:"equipements",component:ListEquipmentComponent},
   // {path:"equipement",component:AddEquipmentComponent},
   // {path:"equipment/:id",component:UpdateEquipmentComponent},

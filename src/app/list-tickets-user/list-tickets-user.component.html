@@ -1,4 +1,4 @@
-<table>
+<!-- <table>
     <thead>
     <tr>
       <th>Description</th>
@@ -22,5 +22,50 @@
      
     </tr>
     </tbody>
-  </table>
- 
+  </table> -->
+
+  <div class="hero">
+    <div class="hero-warpper">
+      <table id="mat-table" mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+        <ng-container matColumnDef="Description">
+          <th mat-header-cell *matHeaderCellDef> Description </th>
+          <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="Creation date">
+          <th mat-header-cell *matHeaderCellDef> Creation date </th>
+          <td mat-cell *matCellDef="let element"> {{element.creationDate}} </td>
+        </ng-container>
+      
+       
+        <ng-container matColumnDef="Repair Description">
+          <th mat-header-cell *matHeaderCellDef> Repair Description </th>
+          <td mat-cell *matCellDef="let element"> {{element.repairDescription}} </td>
+        </ng-container>
+      
+        
+        <ng-container matColumnDef="Status">
+          <th mat-header-cell *matHeaderCellDef> Status </th>
+          <td mat-cell *matCellDef="let element"> {{element.status}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="Name equipment">
+          <th mat-header-cell *matHeaderCellDef> Name equipment </th>
+          <td mat-cell *matCellDef="let element"> {{element.nameEquipment}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="Name failure">
+          <th mat-header-cell *matHeaderCellDef> Name failure </th>
+          <td mat-cell *matCellDef="let element"> {{element.nameFailure}} </td>
+        </ng-container>
+
+      
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    </div>
+  </div>
+
+  
