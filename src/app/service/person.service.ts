@@ -23,4 +23,9 @@ export class PersonService {
     return this.http.get<Person[]>(`${this.urlApiAdmin}/employees`)
 
   }
+  public getIdByUsername(username:string){
+    return this.http.get(`${this.urlApi}/getid/${username}`)
+  }
+
 }
+

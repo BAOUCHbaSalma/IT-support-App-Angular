@@ -2,7 +2,9 @@ import { Component, OnInit } from '@angular/core';
 
 import { SupportTicketService } from '../service/support-ticket.service';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { Erole, EStatus, SupportTicket, SupportTicketDTO } from '../model/it-support';
+import { Equipment, Erole, EStatus, SupportTicket, SupportTicketDTO } from '../model/it-support';
+import { DecodejwtService } from '../service/decode-jwt.service';
+import { EquipmentService } from '../service/equipment.service';
 
 @Component({
   selector: 'app-add-ticket',
@@ -11,15 +13,34 @@ import { Erole, EStatus, SupportTicket, SupportTicketDTO } from '../model/it-sup
 })
 export class AddTicketComponent implements OnInit{
   ticketForm!:FormGroup
-  constructor(private srv:SupportTicketService,private fb:FormBuilder){}
+  idUser:any
+  equipmentList!:Equipment[]
+
+  constructor(private srv:SupportTicketService,private fb:FormBuilder,private srt:DecodejwtService,private srve:EquipmentService){}
   ngOnInit(): void {
+
+    if (typeof localStorage !== 'undefined') {
+      const token = localStorage.getItem('jwt');
+      if (token) {
+        this.srt.getIdByUsername(token).subscribe(id => {
+         this.idUser =id;   
+         this.srve.findByIdUser(id).subscribe(res=>{
+          this.equipmentList=res
+        }) 
+        });
+      }
+    }
+   
+    
+
+  
     this.ticketForm=this.fb.group({
       description:'',
-      userId:'',
       equipementId:'',
       failureId:''
-
     })
+
+    
   
   }
 
@@ -28,8 +49,10 @@ export class AddTicketComponent implements OnInit{
       description: this.ticketForm.value.description,
       failureId: this.ticketForm.value.failureId,
       equipmentId: this.ticketForm.value.equipementId,
-      userId: this.ticketForm.value.userId
+      userId: this.idUser
+      
     }
+    console.log("//:::::idIser"+this.idUser)
    this.srv.addTicket(supportTicketDTO).subscribe(()=>{
     this.ngOnInit()
    })

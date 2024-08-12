@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Equipment } from '../model/it-support';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -28,5 +29,8 @@ export class EquipmentService {
   public findById(id:number){
     return this.http.get(`${this.urlApi}/equipement/${id}`)
 
+  }
+  public findByIdUser(id:any):Observable<Equipment[]>{
+    return this.http.get<Equipment[]>(`${this.urlApiUser}/equipments/${id}`)
   }
 }
