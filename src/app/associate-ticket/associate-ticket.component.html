@@ -1,11 +1,14 @@
 <form [formGroup]="formUpdate" (ngSubmit)="Associate()">
+
   <div class="group">
-      <label for="technician">Select Technician:</label>
-      <select id="technician" formControlName="idT" required>
-        <option *ngFor="let technician of technicianList" [value]="technician.id">
-          {{ technician.username }}
-        </option>
-      </select>
-    </div>
-    <button type="submit">Associate</button>
-  </form>
+    <label for="technician">Select Technician:</label>
+    <select id="technician" formControlName="idT" required>
+  <option value="" disabled selected>Select Technician</option>
+  <option *ngFor="let technician of technicianList" [value]="technician.id">
+    {{ technician.username }}
+  </option>
+</select>
+  </div>
+
+  <button type="submit">Associate</button>
+</form>

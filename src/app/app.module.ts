@@ -35,6 +35,11 @@ import { DashboardEmployeesComponent } from './dashboard-employees/dashboard-emp
 import { ListEmployeesComponent } from './list-employees/list-employees.component';
 import { AssociateTicketComponent } from './associate-ticket/associate-ticket.component';
 import { DashUserComponent } from './dash-user/dash-user.component';
+import { DashTechnicianComponent } from './dash-technician/dash-technician.component';
+import { ListTicketsTechnicianProgressComponent } from './list-tickets-technician-progress/list-tickets-technician-progress.component';
+import { ListTicketsTechnicianResolvedComponent } from './list-tickets-technician-resolved/list-tickets-technician-resolved.component';
+
+import { UpdateTicketsTechnicianComponent } from './update-tickets-technician/update-tickets-technician.component';
 
 @NgModule({
   declarations: [
@@ -62,7 +67,11 @@ import { DashUserComponent } from './dash-user/dash-user.component';
     DashboardEmployeesComponent,
     ListEmployeesComponent,
     AssociateTicketComponent,
-    DashUserComponent
+    DashUserComponent,
+    DashTechnicianComponent,
+    ListTicketsTechnicianProgressComponent,
+    ListTicketsTechnicianResolvedComponent,
+    UpdateTicketsTechnicianComponent
   ],
   imports: [
     BrowserModule,

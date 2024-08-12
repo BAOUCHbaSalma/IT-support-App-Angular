@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { EquipmentService } from '../service/equipment.service';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { Equipment, Erole } from '../model/it-support';
+import { Equipment, Erole, User } from '../model/it-support';
+import { UserService } from '../service/user.service';
+import e from 'express';
 
 @Component({
   selector: 'app-add-equipment',
@@ -10,11 +12,16 @@ import { Equipment, Erole } from '../model/it-support';
 })
 export class AddEquipmentComponent implements OnInit{
  equipementForm!:FormGroup
+ userList!:User[]
   
 
-  constructor(private srv:EquipmentService,private fb:FormBuilder){}
+  constructor(private srv:EquipmentService,private fb:FormBuilder,private srvu:UserService){}
 
   ngOnInit(): void {
+    
+    this.srvu.showAllUsers().subscribe(res=>{
+      this.userList=res
+    })
     this.equipementForm=this.fb.group({
       name:'',
       insertionDate:'',

@@ -45,5 +45,8 @@ export class SupportTicketService {
   public showTicketsPending():Observable<SupportTicket[]>{
     return this.http.get<SupportTicket[]>(`${this.urlApiAdmin}/tickets/pending`)
   }
+  public findTicketsAssociateTehcnician(id:any):Observable<SupportTicket[]>{
+    return this.http.get<SupportTicket[]>(`${this.urlApiTechnician}/tickets/technician/${id}`)
+  }
 
 }

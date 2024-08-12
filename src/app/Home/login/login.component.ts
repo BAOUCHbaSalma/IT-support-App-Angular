@@ -41,7 +41,7 @@ export class LoginComponent implements OnInit{
         if(re.role==Erole.ADMIN){
           this.route.navigateByUrl("dashboard")
         }else if(re.role==Erole.TECHNICIAN){
-          this.route.navigateByUrl("")
+          this.route.navigateByUrl(`dashtechnician/${re.id}`)
 
         }else{
           this.route.navigateByUrl(`dashuser/${re.id}`)

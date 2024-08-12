@@ -19,6 +19,11 @@ import { DashboardEmployeesComponent } from './dashboard-employees/dashboard-emp
 import { ListTicketsPendingComponent } from './list-tickets-pending/list-tickets-pending.component';
 import { AssociateTicketComponent } from './associate-ticket/associate-ticket.component';
 import { DashUserComponent } from './dash-user/dash-user.component';
+import { DashTechnicianComponent } from './dash-technician/dash-technician.component';
+
+import { UpdateTicketsTechnicianComponent } from './update-tickets-technician/update-tickets-technician.component';
+import { ListTicketsTechnicianProgressComponent } from './list-tickets-technician-progress/list-tickets-technician-progress.component';
+import { ListTicketsProgressComponent } from './list-tickets-progress/list-tickets-progress.component';
 
 const routes: Routes = [
   {path:"",component:HomeComponent},
@@ -29,7 +34,12 @@ const routes: Routes = [
       {path: '', component: ListTicketsPendingComponent },
       {path: 'update/:id', component: AssociateTicketComponent },
     ]},
-    {path:'failures',component:DashboardFailureComponent},
+    {path:'failures',component:DashboardFailureComponent,children:[
+    
+      {path: '', component: FailureComponent },
+      {path: 'update/:id', component: UpdateFailureComponent },
+
+    ]},
     {path:'employees',component:DashboardEmployeesComponent},
     {path:'update/:id',component:UpdateEquipmentComponent}
     ]
@@ -38,6 +48,13 @@ const routes: Routes = [
     {path: 'add', component:AddTicketComponent },
     {path: ':id', component: ListTicketsUserComponent },
   ] 
+},
+{path: 'dashtechnician', component: DashTechnicianComponent, children:[
+  {path: ':id', component:ListTicketsTechnicianProgressComponent},
+  {path: 'update/:idT', component:UpdateTicketsTechnicianComponent},
+
+ 
+] 
 },
   // {path:"equipements",component:ListEquipmentComponent},
   // {path:"equipement",component:AddEquipmentComponent},

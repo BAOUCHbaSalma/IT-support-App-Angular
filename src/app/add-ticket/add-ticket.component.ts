@@ -2,9 +2,10 @@ import { Component, OnInit } from '@angular/core';
 
 import { SupportTicketService } from '../service/support-ticket.service';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { Equipment, Erole, EStatus, SupportTicket, SupportTicketDTO } from '../model/it-support';
+import { Equipment, Erole, EStatus, Failure, SupportTicket, SupportTicketDTO } from '../model/it-support';
 import { DecodejwtService } from '../service/decode-jwt.service';
 import { EquipmentService } from '../service/equipment.service';
+import { FailureService } from '../service/failure.service';
 
 @Component({
   selector: 'app-add-ticket',
@@ -15,8 +16,9 @@ export class AddTicketComponent implements OnInit{
   ticketForm!:FormGroup
   idUser:any
   equipmentList!:Equipment[]
+  failuresList!:Failure[]
 
-  constructor(private srv:SupportTicketService,private fb:FormBuilder,private srt:DecodejwtService,private srve:EquipmentService){}
+  constructor(private srv:SupportTicketService,private fb:FormBuilder,private srt:DecodejwtService,private srve:EquipmentService,private srvF:FailureService){}
   ngOnInit(): void {
 
     if (typeof localStorage !== 'undefined') {
@@ -30,6 +32,9 @@ export class AddTicketComponent implements OnInit{
         });
       }
     }
+    this.srvF.showFailures().subscribe(res=>{
+      this.failuresList=res
+    })
    
     
 

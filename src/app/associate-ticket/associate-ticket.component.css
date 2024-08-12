@@ -1,12 +1,9 @@
 form{
     width: 100%;
     padding: 20px 0;
-    display: flex;
-    text-align: left;
-    flex-wrap: wrap;
 }
 .group{
-    width: 50%;
+    width: 100%;
 }
 .group > label{
     font-size: 15px;
@@ -43,3 +40,22 @@ button:hover{
     border: 1px solid var(--color-primary);
     background: white;
 }
+select {
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px solid var(--color-primary);
+    width: 30%;
+    background: transparent;
+    margin: 0 19px;
+    color: white;
+  }
+  
+  select option {
+    color: white; /* Assurez-vous que cette couleur contraste avec le fond */
+    background: var(--color-primary);
+  }
+  
+  option:disabled {
+    color: white; /* Couleur du texte pour l'option par défaut */
+    background: green;
+  }

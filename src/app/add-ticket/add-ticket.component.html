@@ -4,20 +4,24 @@
     <label for="description">description:</label><br>
     <input id="description" formControlName="description" type="text" placeholder="description de Failure "><br>
 
-    <!-- <label for="equipementId">equipementId:</label><br>
-    <input id="equipementId" formControlName="equipementId" type="text" placeholder="equipementId"><br> -->
     <label for="equipementId">Select Equipment:</label>
       <select id="equipementId" formControlName="equipementId" required>
         <option *ngFor="let equipment of equipmentList" [value]="equipment.idEquipement">
           {{ equipment.name }}
         </option>
-      </select>
-      
+      </select><br>
+      <label for="failureId">Select Failure:</label>
+      <select id="failureId" formControlName="failureId" required>
+        <option *ngFor="let failure of failuresList" [value]="failure.id">
+          {{ failure.name }}
+        </option>
+      </select> <br>
 
-    <label for="failureId">failureId:</label><br>
-    <input id="failureId" formControlName="failureId" type="text" placeholder="failureId"><br>
-    <button  type="submit">Submit</button>
+      <button type="submit">Sumbit</button>
+
     </div>
+    
+    
 
     
 
@@ -25,9 +29,4 @@
 </form>
 
 
-      <!-- <label for="technician">Select Technician:</label>
-      <select id="technician" formControlName="idT" required>
-        <option *ngFor="let technician of technicianList" [value]="technician.id">
-          {{ technician.username }}
-        </option>
-      </select> -->
+     

@@ -45,7 +45,7 @@
               <ng-container matColumnDef="update">
                 <th mat-header-cell *matHeaderCellDef>Update</th>
                 <td mat-cell *matCellDef="let element">
-                  <button  mat-button color="primary" id="update" >
+                  <button  mat-button color="primary" id="update" [routerLink]="['/dashboard/failures/update', element.id]" >
                     Update
                   </button>
                 </td>
