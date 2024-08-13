@@ -1,18 +1,26 @@
 <div class="main">
-    <div class="logo">
-        <img src="../../assets/images/logo1.png" alt="">
+    <div class="header">
+        <div class="logo">
+            <img src="../../assets/images/logo1.png" alt="">
+        </div>
+        <div class="controles">
+            <div class="username">
+                <h3>Technician</h3>
+            </div>
+            
+            <a routerLink="" (click)="logout(true)" id="logout">
+                <img src="../../../assets/icons/logout.png" width="100%">
+            </a>
+
+        </div>
     </div>
+    
    
     <div class="main-hero">
-
-        <a routerLink=""><img src="../../assets/icons/left-arrow.png" alt=""></a>
         <div class="main-wrapper">
             <router-outlet></router-outlet>
-        </div>
-        <div class="main-wrapper">
-           <app-list-tickets-technician-resolved></app-list-tickets-technician-resolved>
+            <app-list-tickets-technician-resolved></app-list-tickets-technician-resolved>
         </div>
     </div>
-        <a routerLink=""><img src="../../assets/icons/right-arrow.png" alt=""></a>
     
 </div>

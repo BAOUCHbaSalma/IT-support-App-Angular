@@ -51,11 +51,10 @@ select {
   }
   
   select option {
-    color: white; /* Assurez-vous que cette couleur contraste avec le fond */
-    background: var(--color-primary);
+    color: var(--color-primary); /* Assurez-vous que cette couleur contraste avec le fond */
+    background: white;
   }
   
   option:disabled {
     color: white; /* Couleur du texte pour l'option par défaut */
-    background: green;
   }

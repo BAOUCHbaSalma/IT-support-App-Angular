@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DecodejwtService } from '../service/decode-jwt.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dash-user',
@@ -8,7 +9,7 @@ import { DecodejwtService } from '../service/decode-jwt.service';
 })
 export class DashUserComponent implements OnInit{
   idUser:any
-  constructor(private srv:DecodejwtService){}
+  constructor(private srv:DecodejwtService , private router : Router){}
   ngOnInit(): void {
 
     if (typeof localStorage !== 'undefined') {
@@ -21,4 +22,18 @@ export class DashUserComponent implements OnInit{
        }
 
 }
-}}
+}
+
+check = false;
+  logout(check : boolean) {
+    if(check){
+      localStorage.removeItem('jwt');
+      this.router.navigateByUrl('');
+    }
+    else{
+      console.log("wa hasan");
+    }
+    
+  }
+
+}

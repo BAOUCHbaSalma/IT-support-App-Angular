@@ -1,31 +1,31 @@
+<h1>Add Tickets</h1>
 <form [formGroup]="ticketForm" (ngSubmit)="saveTicket()">
 
     <div class="group">
     <label for="description">description:</label><br>
     <input id="description" formControlName="description" type="text" placeholder="description de Failure "><br>
+    </div>
 
-    <label for="equipementId">Select Equipment:</label>
+    <div class="group">
+      <label for="equipementId">Select Equipment:</label><br>
       <select id="equipementId" formControlName="equipementId" required>
+        <option>Equipment</option>
         <option *ngFor="let equipment of equipmentList" [value]="equipment.idEquipement">
           {{ equipment.name }}
         </option>
-      </select><br>
-      <label for="failureId">Select Failure:</label>
+      </select>
+    </div>
+    <div class="group">
+      <label for="failureId">Select Failure:</label><br>
       <select id="failureId" formControlName="failureId" required>
+        <option>Failure</option>
         <option *ngFor="let failure of failuresList" [value]="failure.id">
           {{ failure.name }}
         </option>
       </select> <br>
-
-      <button type="submit">Sumbit</button>
-
     </div>
     
-    
-
-    
-
-
+    <button type="submit">Sumbit</button>
 </form>
 
 
