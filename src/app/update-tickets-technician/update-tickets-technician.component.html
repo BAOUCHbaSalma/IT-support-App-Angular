@@ -1,1 +1,11 @@
-<p>update-tickets-technician works!</p>
+<form [formGroup]="ticketForm" (ngSubmit)="update()">
+
+    <div class="group">
+    <label for="repairDescpription">Repair Description:</label><br>
+    <input id="repairDescpription" formControlName="repairDescpription" type="text" placeholder="Repair Descpription "><br>
+
+    </div>
+    
+    <button type="submit">Submit</button>
+
+</form>

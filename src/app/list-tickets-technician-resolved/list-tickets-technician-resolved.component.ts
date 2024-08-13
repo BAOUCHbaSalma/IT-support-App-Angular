@@ -18,7 +18,8 @@ export class ListTicketsTechnicianResolvedComponent implements OnInit{
 
   ngOnInit(): void {
     this.idTechnicien=this.router.snapshot.paramMap.get("id")
-    this.srv.findTicketsAssociateTehcnician(this.idTechnicien).subscribe(res=>{
+    console.log("//////////resolved/"+this.idTechnicien)
+    this.srv.findTicketsResolvedByTechnicien(this.idTechnicien).subscribe(res=>{
       this.supportTicketsList=res
       this.dataSource.data=this.supportTicketsList;
     })

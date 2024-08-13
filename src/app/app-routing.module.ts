@@ -49,8 +49,8 @@ const routes: Routes = [
     {path: ':id', component: ListTicketsUserComponent },
   ] 
 },
-{path: 'dashtechnician', component: DashTechnicianComponent, children:[
-  {path: ':id', component:ListTicketsTechnicianProgressComponent},
+{path: 'dashtechnician/:id', component: DashTechnicianComponent, children:[
+  {path: '', component:ListTicketsTechnicianProgressComponent},
   {path: 'update/:idT', component:UpdateTicketsTechnicianComponent},
 
  

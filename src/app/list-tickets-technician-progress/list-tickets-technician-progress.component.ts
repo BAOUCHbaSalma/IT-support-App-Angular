@@ -17,7 +17,7 @@ export class ListTicketsTechnicianProgressComponent implements OnInit{
 
   ngOnInit(): void {
     this.idTechnicien=this.router.snapshot.paramMap.get("id")
-    this.srv.findTicketsAssociateTehcnician(this.idTechnicien).subscribe(res=>{
+    this.srv.findTicketsProgressByTechnicien(this.idTechnicien).subscribe(res=>{
       this.supportTicketsList=res
       this.dataSource.data=this.supportTicketsList;
     })

@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { SupportTicket, SupportTicketDTO, SupportTicketDTOUser, SupportTicketsDTOAdmin } from '../model/it-support';
+import { SuppoetTicketDTOTechnicien, SupportTicket, SupportTicketDTO, SupportTicketDTOUser, SupportTicketsDTOAdmin } from '../model/it-support';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -26,9 +26,7 @@ export class SupportTicketService {
   public associateTicket(id:number,Ticket:SupportTicketsDTOAdmin){
    return this.http.put(`${this.urlApiAdmin}/ticket/update/${id}`,Ticket)
   }
-  public updateTicketTechnician(id:number,Ticket:SupportTicket){
-    return this.http.put(`${this.urlApiTechnician}/ticket/update/${id}`,Ticket)
-  }
+  
 
   public showAllTickets():Observable<SupportTicket[]>{
     return this.http.get<SupportTicket[]>(`${this.urlApiAdmin}/showAll`)
@@ -47,6 +45,19 @@ export class SupportTicketService {
   }
   public findTicketsAssociateTehcnician(id:any):Observable<SupportTicket[]>{
     return this.http.get<SupportTicket[]>(`${this.urlApiTechnician}/tickets/technician/${id}`)
+  }
+
+  public findTicketsProgressByTechnicien(id:number):Observable<SupportTicket[]>{
+    return this.http.get<SupportTicket[]>(`${this.urlApiTechnician}/tickets/progress/${id}`)
+
+  }
+
+  public findTicketsResolvedByTechnicien(id:number):Observable<SupportTicket[]>{
+    return this.http.get<SupportTicket[]>(`${this.urlApiTechnician}/tickets/resolved/${id}`)
+
+  }
+  public upadteTicketByTechnician(id:number,supportTicketDTO:SuppoetTicketDTOTechnicien){
+    return this.http.put(`${this.urlApiTechnician}/tickets/update/${id}`,supportTicketDTO)
   }
 
 }

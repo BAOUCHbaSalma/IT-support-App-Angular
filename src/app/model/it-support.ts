@@ -61,6 +61,9 @@ export interface SupportTicketDTOUser{
 export interface SupportTicketsDTOAdmin{
     idTechnicien:number
 }
+export interface SuppoetTicketDTOTechnicien{
+    repairDescpription:string
+}
 
 export enum Erole {
     ADMIN = 'ADMIN',
@@ -71,4 +74,4 @@ export enum EStatus {
     Pending = 'Pending',
     In_Progress = 'In_Progress',
     Resolved='Resolved'
-}
+ }
