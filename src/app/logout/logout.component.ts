@@ -15,8 +15,8 @@ export class LogoutComponent implements OnInit{
   check = false;
   logout(check : boolean) {
     if(check){
-      localStorage.removeItem('jwtData');
-    this.router.navigateByUrl('/fr');
+      localStorage.removeItem('jwt');
+    this.router.navigateByUrl('/');
     }
     else{
       console.log("wa hasan");

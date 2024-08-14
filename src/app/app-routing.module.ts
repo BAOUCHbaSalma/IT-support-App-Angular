@@ -25,10 +25,15 @@ import { UpdateTicketsTechnicianComponent } from './update-tickets-technician/up
 import { ListTicketsTechnicianProgressComponent } from './list-tickets-technician-progress/list-tickets-technician-progress.component';
 import { ListTicketsProgressComponent } from './list-tickets-progress/list-tickets-progress.component';
 
+import { Erole } from './model/it-support';
+import { AuthGuard } from './guards/auth.guard';
+
 const routes: Routes = [
   {path:"",component:HomeComponent},
+
+  
   {
-    path: 'dashboard', component: DashboardComponent, children: [
+    path: 'dashboard', component: DashboardComponent,canActivate: [AuthGuard],data: { role: Erole.ADMIN },children: [
     {path: '', component: DashboardHomeComponent },
     {path:'tickets',component:DashboardSupportTicketComponent, children:[
       {path: '', component: ListTicketsPendingComponent },
@@ -44,12 +49,14 @@ const routes: Routes = [
     {path:'update/:id',component:UpdateEquipmentComponent}
     ]
   },
-  {path: 'dashuser', component: DashUserComponent, children:[
-    {path: 'add', component:AddTicketComponent },
-    {path: ':id', component: ListTicketsUserComponent },
-  ] 
-},
-{path: 'dashtechnician/:id', component: DashTechnicianComponent, children:[
+
+    { 
+      path: 'dashuser',component: DashUserComponent,canActivate:[AuthGuard],data: { role: Erole.USER },children: [
+        { path: 'add', component: AddTicketComponent },
+        { path: ':id', component: ListTicketsUserComponent },
+      ]},
+
+{path: 'dashtechnician/:id', component: DashTechnicianComponent,canActivate:[AuthGuard],data: { role: Erole.TECHNICIAN },children:[
   {path: '', component:ListTicketsTechnicianProgressComponent},
   {path: 'update/:idT', component:UpdateTicketsTechnicianComponent},
 

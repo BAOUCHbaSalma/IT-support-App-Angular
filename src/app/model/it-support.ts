@@ -37,8 +37,8 @@ export interface Equipment{
     insertionDate:string
     status:string
     user:User
-
 }
+
 export interface LoginRequest{
     username:string
     password:string
@@ -75,3 +75,10 @@ export enum EStatus {
     In_Progress = 'In_Progress',
     Resolved='Resolved'
  }
+
+ export interface JwtPayload {
+    sub: string; 
+    iat: number; 
+    exp: number; 
+    roles: string; 
+  }
