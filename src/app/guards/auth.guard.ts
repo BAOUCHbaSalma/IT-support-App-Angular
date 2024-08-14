@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthGuard implements CanActivate {
-
+token:any
   constructor(
     private authService: DecodejwtService,
     private router: Router
@@ -17,13 +17,15 @@ export class AuthGuard implements CanActivate {
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
   ): boolean | UrlTree | Observable<boolean | UrlTree> | Promise<boolean | UrlTree> {
-    const token = localStorage.getItem('jwt');
-    if (!token) {
+    if (typeof localStorage !== 'undefined') {
+       this.token = localStorage.getItem('jwt');
+    }
+    if (!this.token) {
       return this.router.createUrlTree(['']);
     }
 
     const roleAttendu = route.data['role'] as string;
-    const rolePerson = this.authService.getRoleFromToken(token);
+    const rolePerson = this.authService.getRoleFromToken(this.token);
     console.log('role' + rolePerson);
 
     if (rolePerson === roleAttendu) {

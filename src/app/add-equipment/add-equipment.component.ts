@@ -42,7 +42,7 @@ export class AddEquipmentComponent implements OnInit{
         username: '',
         password: '',
         email: '',
-        role: Erole.USER
+        role: Erole.USER,
       }
     }
     

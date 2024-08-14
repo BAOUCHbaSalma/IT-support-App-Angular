@@ -64,6 +64,14 @@ export interface SupportTicketsDTOAdmin{
 export interface SuppoetTicketDTOTechnicien{
     repairDescpription:string
 }
+export interface FailureHistory{
+    failure:Failure
+    equipment:Equipment
+    failureDate:string
+    resolveDate:string
+    repair:string
+
+}
 
 export enum Erole {
     ADMIN = 'ADMIN',

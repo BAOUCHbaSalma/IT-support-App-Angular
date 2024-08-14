@@ -40,6 +40,8 @@ import { ListTicketsTechnicianProgressComponent } from './list-tickets-technicia
 import { ListTicketsTechnicianResolvedComponent } from './list-tickets-technician-resolved/list-tickets-technician-resolved.component';
 
 import { UpdateTicketsTechnicianComponent } from './update-tickets-technician/update-tickets-technician.component';
+import { ListFailureHistoryComponent } from './list-failure-history/list-failure-history.component';
+import { AddPersonComponent } from './add-person/add-person.component';
 
 @NgModule({
   declarations: [
@@ -71,7 +73,9 @@ import { UpdateTicketsTechnicianComponent } from './update-tickets-technician/up
     DashTechnicianComponent,
     ListTicketsTechnicianProgressComponent,
     ListTicketsTechnicianResolvedComponent,
-    UpdateTicketsTechnicianComponent
+    UpdateTicketsTechnicianComponent,
+    ListFailureHistoryComponent,
+    AddPersonComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,38 @@
+<div class="hero">
+    <div class="hero-warpper">
+      <table id="mat-table" mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+        <ng-container matColumnDef="Name Failure">
+          <th mat-header-cell *matHeaderCellDef> Name Failure </th>
+          <td mat-cell *matCellDef="let element"> {{element.failure.name}} </td>
+        </ng-container>
+      
+       
+        <ng-container matColumnDef="Name Equipment">
+          <th mat-header-cell *matHeaderCellDef> Name Equipment </th>
+          <td mat-cell *matCellDef="let element"> {{element.equipment.name}} </td>
+        </ng-container>
+      
+        
+        <ng-container matColumnDef="Failure Date">
+          <th mat-header-cell *matHeaderCellDef> Failure Date </th>
+          <td mat-cell *matCellDef="let element"> {{element.failureDate}} </td>
+        </ng-container>
+ 
+        <ng-container matColumnDef="Resolve Date">
+            <th mat-header-cell *matHeaderCellDef> Resolve Date </th>
+            <td mat-cell *matCellDef="let element"> {{element.resolveDate}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="Repair">
+            <th mat-header-cell *matHeaderCellDef> Repair </th>
+            <td mat-cell *matCellDef="let element"> {{element.repair}} </td>
+          </ng-container>
+
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    </div>
+  </div>
+  

@@ -42,9 +42,9 @@ export class UpdateEquipmentComponent implements OnInit {
       user: {
         id: this.equipementForm.value.userId,
         username: '',
-        password: '', 
-        email: '',    
-        role: Erole.USER 
+        password: '',
+        email: '',
+        role: Erole.USER,
       }
     };
 

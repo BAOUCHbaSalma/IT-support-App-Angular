@@ -9,12 +9,15 @@ import { MatTableDataSource } from '@angular/material/table';
   styleUrl: './list-equipment.component.css'
 })
 export class ListEquipmentComponent implements OnInit{
-  Listequipment:any
+  Listequipment!:Equipment[]
   dataSource = new MatTableDataSource<Equipment>();
 
   constructor(private srv:EquipmentService){}
 
   ngOnInit(): void {
+    this.srv.getEquipments().subscribe(equipments => {
+      this.dataSource.data = equipments;
+    });
     this.srv.showEquipements().subscribe(value=>{
       this.Listequipment=value
       this.dataSource.data = this.Listequipment;

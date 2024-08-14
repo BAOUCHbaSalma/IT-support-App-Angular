@@ -27,6 +27,7 @@ import { ListTicketsProgressComponent } from './list-tickets-progress/list-ticke
 
 import { Erole } from './model/it-support';
 import { AuthGuard } from './guards/auth.guard';
+import { ListFailureHistoryComponent } from './list-failure-history/list-failure-history.component';
 
 const routes: Routes = [
   {path:"",component:HomeComponent},
@@ -39,6 +40,8 @@ const routes: Routes = [
       {path: '', component: ListTicketsPendingComponent },
       {path: 'update/:id', component: AssociateTicketComponent },
     ]},
+    {path:'statistics',component:ListFailureHistoryComponent},
+
     {path:'failures',component:DashboardFailureComponent,children:[
     
       {path: '', component: FailureComponent },

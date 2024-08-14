@@ -1,0 +1,30 @@
+
+<form [formGroup]="personForm" (ngSubmit)="save()">
+
+
+    <div class="group">
+    <label for="username">Username:</label><br>
+    <input id="username" formControlName="username" type="text" placeholder="Username"><br>
+    </div>
+
+    <div class="group">
+    <label for="password">Password:</label><br>
+    <input id="password" formControlName="password" type="text" placeholder="password"><br>
+    </div>
+  
+    <div class="group">
+    <label for="email">Email:</label><br>
+    <input id="email" formControlName="email" type="text" placeholder="email"><br>
+    </div>
+ 
+    <div class="group">
+    <label for="role">Role:</label><br>
+    <select id="role" formControlName="role">
+    <option *ngFor="let role of roles" [value]="role">{{ role }}</option>
+    </select><br>
+    </div>
+   
+
+    <button  type="submit">Submit</button>
+
+</form>

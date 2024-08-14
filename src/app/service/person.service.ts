@@ -26,6 +26,9 @@ export class PersonService {
   public getIdByUsername(username:string){
     return this.http.get(`${this.urlApi}/getid/${username}`)
   }
+  public addUserAndTechnician(person:Person){
+    return this.http.post(`${this.urlApiAdmin}/add/user/technician`,person)
+  }
 
 }
 

@@ -17,9 +17,9 @@
            [ngClass]="{'active': activeLink === '/tickets'}">
           <img src="../../../assets/icons/reserved.png" alt="">Tickets
         </a>
-        <a routerLink="/statistics" 
-           (click)="setActive('/statistics')" 
-           [ngClass]="{'active': activeLink === '/statistics'}">
+        <a routerLink="/dashboard/statistics" 
+           (click)="setActive('/dashboard/statistics')" 
+           [ngClass]="{'active': activeLink === '/dashboard/statistics'}">
           <img src="../../../assets/icons/statistics.png" alt="">Statistics
         </a>
         <a routerLink="/dashboard/employees" 
