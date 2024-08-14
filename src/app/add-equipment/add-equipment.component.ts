@@ -35,8 +35,8 @@ export class AddEquipmentComponent implements OnInit{
     const equipement:Equipment={
       idEquipement: 0,
       name: this.equipementForm.value.name,
-      insertionDate: this.equipementForm.value.insertionDate,
-      status:  this.equipementForm.value.status,
+      insertionDate:"",
+      status:"",
       user: {
         id: this.equipementForm.value.userId,
         username: '',

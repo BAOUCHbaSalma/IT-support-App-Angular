@@ -28,6 +28,6 @@ export class ListEquipmentComponent implements OnInit{
       this.ngOnInit()
     })
   }
-  displayedColumns: string[] = ['Name', 'Insertion Date', 'User', 'delete', 'update'];
+  displayedColumns: string[] = ['Name', 'Status','Insertion Date', 'User', 'delete', 'update'];
 
 }

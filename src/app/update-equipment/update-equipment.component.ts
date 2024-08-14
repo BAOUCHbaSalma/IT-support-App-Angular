@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { EquipmentService } from '../service/equipment.service';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Route, Router } from '@angular/router';
-import { Equipment, Erole } from '../model/it-support';
+import { Equipment, Erole, User } from '../model/it-support';
+import { UserService } from '../service/user.service';
 
 @Component({
   selector: 'app-update-equipment',
@@ -12,9 +13,13 @@ import { Equipment, Erole } from '../model/it-support';
 export class UpdateEquipmentComponent implements OnInit {
   idEquipment:any
   equipementForm!:FormGroup
-  constructor(private srv:EquipmentService,private fb:FormBuilder,private route:ActivatedRoute,private router:Router){}
+  userList!:User[]
+  constructor(private srv:EquipmentService,private fb:FormBuilder,private route:ActivatedRoute,private router:Router,private srvu:UserService){}
 
   ngOnInit(): void {
+    this.srvu.showAllUsers().subscribe(res=>{
+      this.userList=res
+    })
     this.idEquipment=this.route.snapshot.paramMap.get("id")
     this.equipementForm = this.fb.group({
       name: '',
@@ -37,8 +42,8 @@ export class UpdateEquipmentComponent implements OnInit {
     const updatedEquipment: Equipment = {
       idEquipement: this.idEquipment,
       name: this.equipementForm.value.name,
-      insertionDate: this.equipementForm.value.insertionDate,
-      status: this.equipementForm.value.status,
+      insertionDate:"",
+      status: "",
       user: {
         id: this.equipementForm.value.userId,
         username: '',

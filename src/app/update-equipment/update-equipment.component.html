@@ -7,16 +7,19 @@
             <label for="name">Name:</label><br>
             <input id="name" formControlName="name" type="text" placeholder="Write name "><br>
         
-            <label for="insertionDate">Insertion Date:</label><br>
-            <input id="insertionDate" formControlName="insertionDate" type="date" placeholder="Write Insertion Date "><br>
+    
             </div>
             <div class="group">
+
+                <label for="userId">Select User:</label><br>
+                <select id="userId" formControlName="userId" required>
+                <option *ngFor="let user of userList" [value]="user.id">
+                {{ user.username }}
+                </option>
+                </select>
         
-            <label for="status">Status:</label><br>
-            <input id="status" formControlName="status" type="text" placeholder="Write status "><br>
-        
-            <label for="userId">Id user:</label><br>
-            <input id="userId" formControlName="userId" type="text" placeholder="Write userId "><br>
+            <!-- <label for="userId">Id user:</label><br>
+            <input id="userId" formControlName="userId" type="text" placeholder="Write userId "><br> -->
         </div>
             <button  type="submit">Submit</button>
         
